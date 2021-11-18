@@ -12,16 +12,17 @@ export default {
   },
   computed: {
     ...mapState({
-      count: state => state.count
+      count: state => state.count.count
     }),
     doneTodosCount () {
-      return this.$store.getters.doneTodos
+      return this.$store.getters['count/doneTodos']
       // this.$store.getters.getTodoById(2).length
     }
   },
   methods: {
     increment() {
-      this.$store.commit('increment')
+      // this.$store.commit('increment')
+      this.$store.dispatch('count/increment')
     }
   }
 }
