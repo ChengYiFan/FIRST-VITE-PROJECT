@@ -1,5 +1,6 @@
 import { createStore, createLogger } from 'vuex'
 import count from './modules/count'
+import products from './modules/products'
 
 const debug = process.env.NODE_ENV !== 'production'
 
@@ -7,6 +8,7 @@ const debug = process.env.NODE_ENV !== 'production'
 const store = createStore({
   modules: {
     count,
+    products,
   },
   strict: debug,
   plugins: debug ? [createLogger()] : []
