@@ -6,7 +6,7 @@
 <template>
   <div>
     <router-link to="/">Home</router-link>
-    <router-link to="/about">about</router-link>
+    <router-link to="/products">Products</router-link>
   </div>
   <router-view />
 </template>
